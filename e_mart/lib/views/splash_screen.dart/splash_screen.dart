@@ -1,7 +1,5 @@
-import 'package:e_mart/consts/colors.dart';
 import 'package:e_mart/consts/consts.dart';
 import 'package:e_mart/widgets_common/applogo_widget.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../auth_screen/login_screen.dart';
 
@@ -13,9 +11,9 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  //create a method to change a screen
+// creating a method to change screen
   changeScreen() {
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 3), () {
       Get.to(() => const LoginScreen());
     });
   }
@@ -32,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: redColor,
       body: Center(
         child: Column(children: [
-          Align(alignment: Alignment.topLeft),
+          const Align(alignment: Alignment.topLeft),
           Image.asset(icSplashBg, width: 300),
           20.heightBox,
           applogoWidget(),

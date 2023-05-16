@@ -1,5 +1,5 @@
 import 'package:e_mart/views/splash_screen.dart/splash_screen.dart';
-import 'package:flutter/material.dart';
+
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'consts/consts.dart';
 
@@ -9,6 +9,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
   // we are using getx so we have to change this material app into getmaterial app
 
   @override
