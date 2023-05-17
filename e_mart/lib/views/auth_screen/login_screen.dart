@@ -7,7 +7,7 @@ import 'package:e_mart/widgets_common/custom_textfield.dart';
 import 'package:e_mart/widgets_common/our_button.dart';
 import 'package:get/get.dart';
 // ignore: unused_import
-import '../home_screen/home_screen.dart';
+import '../home_screen/home.dart';
 import '../splash_screen.dart/splash_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget {
                   title: login,
                   textColor: whiteColor,
                   onPress: () {
-                    Get.to(() => const HomeScreen());
+                    Get.to(() => const Home());
                   }).box.width(context.screenWidth - 50).make(),
               5.heightBox,
               createNewAccount.text.color(fontGrey).make(),
