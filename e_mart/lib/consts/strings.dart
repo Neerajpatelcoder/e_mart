@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 const appname = "eMart";
 const appversion = "Version 1.0.0";
 const credits = "@Baaba Devs";
@@ -39,3 +41,24 @@ const searchanything = "Search anything...",
     girlsDress = "Girls Dresses",
     featuredProduct = "Featured Product",
     featuredCategories = "Featured Categories";
+//category screen
+const category = "Category";
+
+const womenClothing = "Women Clothing";
+const menClothingFashion = "Men Clothing & Fashion ";
+const compAccess = "Computer & Accessories";
+
+const automobile = "Automobile";
+
+const kidtoys = "Kids & Toys";
+const sports = "Sports";
+const jewelery = "jewelery";
+const cellphone = "Cellphone & Tab";
+const furniture = "Furniture";
+//item details strings
+const video = "video",
+    reviews = "Reviews",
+    sellerpolicy = "seleer Policy",
+    returnpolicy = "return Policy",
+    supportPolicy = "Support Policy",
+    productSummary = "Product u may like also";
