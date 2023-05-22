@@ -9,7 +9,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   // we are using getx so we have to change this material app into getmaterial app
 
   @override

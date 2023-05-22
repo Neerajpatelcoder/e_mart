@@ -63,3 +63,6 @@ const video = "video",
     supportPolicy = "Support Policy",
     productSummary = "Product u may like also",
     logout = "Logout";
+//profile string
+const wishlist = "My wishlist", order = "My Order", messagse = "Messages";
+   // profileButtonsIcon = "ProfileButtonsIcon";

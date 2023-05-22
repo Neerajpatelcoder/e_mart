@@ -1,4 +1,6 @@
 import 'package:e_mart/consts/consts.dart';
+import 'package:e_mart/consts/list.dart';
+import 'package:e_mart/views/profile_screen/components/details_card.dart';
 import 'package:e_mart/widgets_common/bg_wideget.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -9,17 +11,20 @@ class ProfileScreen extends StatelessWidget {
     return bgWidget(
       child: Scaffold(
         body: SafeArea(
-            child: Container(
-          padding: const EdgeInsets.all(8),
-          child: Column(
-            children: [
-              //edit profile button
-              const Align(
+            child: Column(
+          children: [
+            //edit profile button
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: const Align(
                       alignment: Alignment.topRight,
                       child: Icon(Icons.edit, color: whiteColor))
                   .onTap(() {}),
-              //user deatils section
-              Row(
+            ),
+            //user deatils section
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: Row(
                 children: [
                   Image.asset(imgProfile2, width: 130, fit: BoxFit.cover)
                       .box
@@ -45,8 +50,58 @@ class ProfileScreen extends StatelessWidget {
                   )
                 ],
               ),
-            ],
-          ),
+            ),
+            20.heightBox,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                detailsCard(
+                    count: "00",
+                    title: "in your cart",
+                    width: context.screenWidth / 3.4),
+                detailsCard(
+                    count: "32",
+                    title: "in your wishlist",
+                    width: context.screenWidth / 3.4),
+                detailsCard(
+                    count: "675",
+                    title: "in your order",
+                    width: context.screenWidth / 3.4)
+              ],
+            ),
+            //buttons section
+
+            ListView.separated(
+              shrinkWrap: true,
+              separatorBuilder: (context, index) {
+                return const Divider(color: lightGrey);
+              },
+              itemCount: profileButtonsList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  leading: Image.asset(
+                    profileButtonsIcon[index],
+                    width: 22,
+                  ),
+                  title: profileButtonsList[index]
+                      .text
+                      .fontFamily(semibold)
+                      .color(darkFontGrey)
+                      .make(),
+                );
+              },
+            )
+                .box
+                .white
+                .rounded
+                .margin(const EdgeInsets.all(12))
+                .padding(const EdgeInsets.symmetric(horizontal: 16))
+                .shadowSm
+                .make()
+                .box
+                .color(redColor)
+                .make()
+          ],
         )),
       ),
     );
