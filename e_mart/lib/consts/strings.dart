@@ -61,4 +61,5 @@ const video = "video",
     sellerpolicy = "seleer Policy",
     returnpolicy = "return Policy",
     supportPolicy = "Support Policy",
-    productSummary = "Product u may like also";
+    productSummary = "Product u may like also",
+    logout = "Logout";
